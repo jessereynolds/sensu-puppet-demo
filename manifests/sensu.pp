@@ -1,3 +1,3 @@
 node /^sensu-server/ {
-  include role::sensu_server
+  include role::sensu_enterprise
 }

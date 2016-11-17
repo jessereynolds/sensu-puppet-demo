@@ -2,6 +2,8 @@ class profile::sensu_server {
   class { '::sensu':
     install_repo      => true,
     server            => true,
+    enterprise        => true,
+    enterprise_dashboard => true,
     manage_services   => true,
     manage_user       => true,
     rabbitmq_password => 'fandango-tulip-soldier',
