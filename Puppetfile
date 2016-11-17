@@ -3,11 +3,14 @@ forge "http://forge.puppetlabs.com"
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
 #mod "puppetlabs/inifile",     '1.5.0'
-#mod "puppetlabs/stdlib",      '4.11.0'
 #mod "puppetlabs/concat",      '2.1.0'
 
+mod "puppetlabs/stdlib",        '4.11.0'
 mod "puppetlabs/rabbitmq",      '5.6.0'
 mod "arioch/redis",             '1.2.3'
+mod "puppetlabs/apt",           '2.3.0'
+mod "stahnma/epel",             '1.2.2'
+mod "puppet/staging",           '2.0.1'
 
 mod 'sensu',
   :git    => 'https://github.com/sensu/sensu-puppet',
