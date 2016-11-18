@@ -1,5 +1,3 @@
 class profile::epel {
-  yumrepo {'epel':
-    enabled => true,
-  }
+  include epel
 }
