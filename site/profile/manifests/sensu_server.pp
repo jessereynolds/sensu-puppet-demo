@@ -1,6 +1,6 @@
 class profile::sensu_server {
 
-  unless $::sensu_enterprise_user and $::sensu_enterprise_pass {
+  unless $::sensu_enterprise_user and $::sensu_enterprise_password {
     fail('Please set $::sensu_enterprise_user and $::sensu_enterprise_password as variables or external facts. These should correspond to your account with Sensu.')
   }
 
