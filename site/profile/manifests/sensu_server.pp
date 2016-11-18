@@ -7,8 +7,6 @@ class profile::sensu_server {
   $u_type = type($::sensu_enterprise_user)
   $p_type = type($::sensu_enterprise_password)
 
-  notify {"types: ${u_type}, ${p_type}": }
-
   class { '::sensu':
     install_repo         => true,
     enterprise           => true,
@@ -27,4 +25,9 @@ class profile::sensu_server {
     handlers    => 'default',
     subscribers => 'sensu-test',
   }
+
+  package { 'rubygems':
+    ensure => present,
+  }
+
 }
