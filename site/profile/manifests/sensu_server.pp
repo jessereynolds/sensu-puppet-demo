@@ -1,3 +1,6 @@
+# Puppet Profile to demonstrate creation of a Sensu Enterprise server.
+# Makes use of the Sensu module from Sensu
+# https://github.com/sensu/sensu-puppet
 class profile::sensu_server {
 
   unless $::sensu_enterprise_user and $::sensu_enterprise_password {
