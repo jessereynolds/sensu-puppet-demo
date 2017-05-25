@@ -1,13 +1,10 @@
 classes:
   - role::sensu_enterprise
+  - role::sensu_linux_client
 
 nodes:
-  - CentOS-7.0-64
-  - Ubuntu-14.04-64
-
-class_groups:
-
-node_groups:
+  - CentOS-7.0-64-custom
+  - Ubuntu-14.04-64-custom
 
 test_matrix:
   - all_nodes:
