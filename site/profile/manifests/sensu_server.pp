@@ -4,7 +4,8 @@
 class profile::sensu_server {
 
   unless $::sensu_enterprise_user and $::sensu_enterprise_password {
-    fail('Please set $::sensu_enterprise_user and $::sensu_enterprise_password as variables or external facts. These should correspond to your account with Sensu.')
+    fail(join(['Please set $::sensu_enterprise_user and $::sensu_enterprise_password as',
+      ' variables or external facts. These should correspond to your account with Sensu.']))
   }
 
   $u_type = type($::sensu_enterprise_user)
