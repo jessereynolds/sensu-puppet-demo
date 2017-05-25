@@ -1,5 +1,5 @@
 class profile::rabbitmq {
-  class {'::rabbitmq':
+  class { '::rabbitmq':
     delete_guest_user => true,
   }
 
@@ -7,7 +7,7 @@ class profile::rabbitmq {
     ensure => present,
   }
 
-  rabbitmq_user {'sensu':
+  rabbitmq_user { 'sensu':
     admin    => true,
     password => 'fandango-tulip-soldier',
   }
